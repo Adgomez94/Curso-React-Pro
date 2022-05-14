@@ -1,9 +1,10 @@
 import React from 'react'
+import Navigation from './routes/Navigation'
 
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <Navigation />
     </>
   )
 }
