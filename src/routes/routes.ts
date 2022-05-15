@@ -17,6 +17,8 @@ const Lazy1 = lazy(()=> import(/* viteChunkName: "LazyPage1"*/'../01-lazyload/pa
 const Lazy2 = lazy(()=> import(/* viteChunkName: "LazyPage2"*/'../01-lazyload/pages/LazyPage2'))
 const Lazy3 = lazy(()=> import(/* viteChunkName: "LazyPage3"*/'../01-lazyload/pages/LazyPage3'))
 
+const Nolazy  = lazy(()=> import(/* viteChunkName: "LazyPage1"*/'../01-lazyload/layout/LazyLayout'))
+
 export const routes:Route[] = [
   {
     to: '/lazy1',
@@ -25,15 +27,16 @@ export const routes:Route[] = [
     name: 'lazy-1' 
   },
   {
-    to: '/lazy2',
-    path: 'lazy2',
-    Component: Lazy2,
-    name: 'lazy-2' 
+    // inicar que lazyload va a tenre otras rutas hijas
+    to: '/lazyload/',
+    path: '/lazyload/*',
+    Component: Nolazy,
+    name: 'no Lazy' 
   },
-  {
-    to: '/lazy3',
-    path: 'lazy3',
-    Component: Lazy3,
-    name: 'lazy-1' 
-  },
+  // {
+  //   to: '/lazy3',
+  //   path: 'lazy3',
+  //   Component: Lazy3,
+  //   name: 'lazy-1' 
+  // },
 ]
