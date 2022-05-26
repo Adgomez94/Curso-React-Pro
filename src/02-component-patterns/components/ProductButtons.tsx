@@ -1,15 +1,19 @@
-import React, { useContext } from 'react'
+import React, { CSSProperties, useContext } from 'react'
 import { ProductContextProps } from './ProductCard'
 
 import styles from '../styles/styles.module.css'
 
+export interface Props {
+  className?: string,
+  style?: CSSProperties
+}
 
-export const ProductButtons = () => {
+export const ProductButtons = ({ className }:Props) => {
 
   const { counter, increase } = useContext(ProductContextProps)
 
   return (
-    <div className={ styles.buttonsContainer }>
+    <div className={ `${styles.buttonsContainer} ${className} ` }>
       <button
         onClick={ ()=>increase(-1) }
         className={styles.buttonMinus}

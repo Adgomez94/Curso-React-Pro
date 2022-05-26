@@ -1,5 +1,6 @@
 import React from 'react'
 import { ProductCard, ProductImage, ProductTilte, ProductButtons } from '../components'
+import '../styles/custom-styles.css'
 
 
 const PRODUCT = {
@@ -20,14 +21,29 @@ const ShoppingPage = () => {
         {/* ESTA ES UNA FORMA DE HACERLO */}
 
         <ProductCard product={PRODUCT}>
-          <ProductCard.Image />
+          <ProductCard.Image className='custom-image' />
           <ProductCard.Title />
           <ProductCard.Buttons />
         </ProductCard>
 
-        <ProductCard product={PRODUCT}>
-          <ProductImage />
-          <ProductTilte />
+        <ProductCard
+          style={{
+
+          }} 
+          className="bg-dark"
+          product={PRODUCT}>
+          <ProductImage className='custom-image' />
+          <ProductTilte className='text-white' />
+          <ProductButtons className='custom-button'/>
+        </ProductCard>
+
+        <ProductCard
+          style={{
+            backgroundColor: '#70D1F8'
+          }} 
+          product={PRODUCT}>
+          <ProductImage  />
+          <ProductTilte  />
           <ProductButtons />
         </ProductCard>
       </div>
