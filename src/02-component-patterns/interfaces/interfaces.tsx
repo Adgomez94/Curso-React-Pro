@@ -5,7 +5,7 @@ import { Props as PropButtonProps} from '../components/ProductButtons'
 
 
 export interface Product {
-  id?: string,
+  id: string,
   title?: string,
   img?: string
 }
@@ -21,4 +21,13 @@ export interface ProductCardHOCProps {
   Title: (Props: PropTitleProps) => JSX.Element,
   Image: (Props: PropImageProps) => JSX.Element;
   Buttons: (Props: PropButtonProps) => JSX.Element;
+}
+
+export interface onChangeArgs {
+  product: Product,
+  counter: number
+}
+
+export interface ProductInCart extends Product {
+  counter: number
 }
