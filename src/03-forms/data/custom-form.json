@@ -1,0 +1,48 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Adrian",
+    "label": "First Name",
+    "value": "",
+    "validation": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Duran",
+    "label": "Last Name",
+    "value": ""
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Duran@gmail.com",
+    "label": "email",
+    "value": ""
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "Super Smash"
+      },
+      {
+        "id": 2,
+        "label": "Resident Evil"
+      }
+    ]
+  }
+]

@@ -14,7 +14,6 @@ const MyInputText = ( {label, ...props}:Props ) => {
   /* El fiel tienes todas las acciones */
 
   const [field, meta] = useField(props)
-
   return (
     <>
       {/* <label htmlFor={props.id ||props.name}> {label} </label> */}
